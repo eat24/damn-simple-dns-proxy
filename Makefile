@@ -1,7 +1,7 @@
 .PHONY: build
 build:
 	GOOS=linux ARCH=amd64 go build -o dsdp .
-	docker build -t carlsverre/damn-simple-dns-proxy .
+	docker build -t bpicolo/damn-simple-dns-proxy .
 
 .PHONY: test
 test: build
@@ -9,4 +9,4 @@ test: build
 
 .PHONY: push
 push: build
-	docker push carlsverre/damn-simple-dns-proxy
+	docker push bpicolo/damn-simple-dns-proxy
